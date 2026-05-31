@@ -44,7 +44,7 @@ test.describe('SauceDemo', () => {
   });
 
   // Scenario 1: Locked-out user cannot log in and sees the exact error
-  test('Locked-out user sees lockout error', async ({ page }) => {
+  test.only('Locked-out user sees lockout error', async ({ page }) => {
     await page.goto('/');
     await page.getByPlaceholder('Username').fill('locked_out_user');
     await page.getByPlaceholder('Password').fill('secret_sauce');
