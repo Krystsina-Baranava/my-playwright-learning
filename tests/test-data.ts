@@ -14,7 +14,7 @@ const laptop: Product = {
 
 const headphones: Product = {
   name: 'AirPods Pro',
-  price: 249.99,
+  price: 249.999,
   inStock: false,
 };
 
