@@ -43,7 +43,7 @@ test.describe('SauceDemo', () => {
     await expect(page, 'Should redirect to inventory page').toHaveURL(/inventory/);
   });
 
-  // Scenario 1: Locked-out user cannot log in and sees the exact error
+  // Scenario 1: Locked-out user cannot log in and sees the exact error on the page
   test('Locked-out user sees lockout error', async ({ page }) => {
     await page.goto('/');
     await page.getByPlaceholder('Username').fill('locked_out_user');
@@ -56,7 +56,7 @@ test.describe('SauceDemo', () => {
     ).toHaveText('Epic sadface: Sorry, this user has been locked out.');
   });
 
-  // Task 2: Verify wrong password displays an error message
+  // Task 2: Verify wrong password displays an error message 
   test('Wrong password shows error message', async ({ page }) => {
     await page.goto('https://www.saucedemo.com');
     await page.getByPlaceholder('Username').fill('standard_user');
