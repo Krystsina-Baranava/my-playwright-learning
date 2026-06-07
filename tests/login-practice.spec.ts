@@ -1,5 +1,5 @@
 import { test } from "@playwright/test";
-import { validUser, getLoginUrl } from "../test-data";
+import { validUser, getLoginUrl } from "../test-data/users";
 
 test("test data is wired correctly", async () => {
   const { email, password } = validUser;  // destructuring!
